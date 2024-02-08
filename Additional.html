@@ -1,0 +1,655 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Additional Activity</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Alegreya&display=swap" rel="stylesheet">
+
+<style>
+  body{
+    text-align: center;
+   }
+    #questiondiv{
+     
+      background-color: white;
+      box-shadow: 10px 10px 30px grey;
+      padding-top:10px;
+      padding-bottom:10px;
+      font-size:25px;
+      height:90%;
+      margin-left:1%;
+    }
+    #question{
+      float:left;
+      margin-bottom:10px;
+      display: inline;
+      
+    }
+
+    li{
+      list-style-type: none;
+      margin-right:10px;
+    
+    }
+    #result{
+      font-size: 25px;
+    }
+    button{
+      margin:10px;
+      width:50%;
+    }
+    .menu{
+      text-align:initial;
+      background-color: aquamarine;
+    }
+    .maindiv{
+        background-color: orange;
+   
+    }
+    #heading{
+        font-family:Impact;
+    }
+
+    footer{
+      bottom:0;
+      position: fixed;
+      width: 100%
+    }
+
+    #story{
+      font-family: 'Alegreya', serif;
+      background-color: blueviolet;
+      padding: 20px;
+      color: white;
+      font-weight: bold;
+      word-spacing: 5px;
+      border-radius: 10px;
+      font-size: 25px;
+    }
+    #compliment2, #compliment1, #compliment3, #compliment4, #compliment5, #compliment6, #compliment7{
+      font-size: 30px;
+    }
+
+    div.scroll{
+      overflow-y: auto;
+      margin-bottom:30px;
+    }
+    input{
+      text-align:center;
+      font-size: 25px;
+      width:90%
+    }
+    #input1, #input4, #input7, #input10, #input13,  #input16{
+      background-color: orange;
+    }
+    #input2, #input5, #input8, #input11,  #input14, #input17{
+      background-color: rgb(244, 164, 221);
+    }
+
+    #input3, #input6, #input9, #input12,  #input15{
+      background-color: rgb(97, 186, 208);
+    }
+  
+    hr{
+      height:2px;
+      background-color: black;
+    }
+  span{
+    font-size: 25px;
+  }
+  
+
+  th{
+    font-size: 30px;
+    text-align: center;
+    border: 3px solid black;
+  }
+  td{
+    text-align:center;
+  }
+  table{
+    border: 2px solid black;
+
+  }
+
+
+</style>
+
+</head>
+<body>
+  <audio id="points" src="cheers.mp3"></audio>
+  <audio id="fail" src="fail.mp3"></audio>
+
+  <div class="header" style="width:100%; background-color:rgba(255, 255, 255, 0)">
+    <img src="Logo.png" width="12%" style="float:left; margin-top:10px" class="img-responsive">
+    <span> <img src="header.png" width="50%" height="100px"; class="img-responsive"></span>
+  </div>
+  <br>
+  <br>
+  <center>
+  <div class ="container">
+      <div class="col-lg-3 col-md-3 col-sm-3">
+        <h3>Q1. Solve</h3>
+        <table>
+          
+          <tr>
+            <td></td>
+            <td><input type="number"></td>
+            <td><input type="number"></td>
+            <td><input type="number"></td>
+          </tr>
+          <tr>
+            <th></th>
+            <th>4</th>
+            <th>7</th>
+            <th>9</th>
+          </tr>
+          <tr>
+            <th>-</th>
+            <th>2</th>
+            <th>6</th>
+            <th>7</th>
+          </tr>
+
+          <tr>
+            <td style="color:white">this is empty</td>
+            <td><input type="number" id="input2"></td>
+            <td><input type="number" id="input3"></td>
+            <td><input type="number" id="input4"></td>
+          </tr>
+          
+        </table>
+
+
+        <button id="subbtn" class="btn btn-success" onclick="checkAnswer1()">Submit Answer</button>
+
+        <p id="compliment1" class="comm"></p>
+      </div>
+
+      <div class="col-lg-3 col-md-3 col-sm-3">
+        <h3>Q2. Solve</h3>
+        <table>
+          
+          <tr>
+            <td></td>
+            <td><input type="number"></td>
+            <td><input type="number"></td>
+            <td><input type="number"></td>
+          </tr>
+          <tr>
+            <th></th>
+            <th>7</th>
+            <th>2</th>
+            <th>3</th>
+          </tr>
+          <tr>
+            <th>-</th>
+            <th>3</th>
+            <th>5</th>
+            <th>8</th>
+          </tr>
+
+          <tr>
+            <td style="color:white">this is empty</td>
+            <td><input type="number" id="input6"></td>
+            <td><input type="number" id="input7"></td>
+            <td><input type="number" id="input8"></td>
+          </tr>
+          
+        </table>
+
+
+        <button id="subbtn" class="btn btn-success" onclick="checkAnswer2()">Submit Answer</button>
+
+        <p id="compliment2" class="comm"></p>
+      </div>
+
+      <div class="col-lg-3 col-md-3 col-sm-3">
+        <h3>Q3. Solve</h3>
+        <table>
+          
+          <tr>
+            <td></td>
+            <td><input type="number"></td>
+            <td><input type="number"></td>
+            <td><input type="number"></td>
+          </tr>
+          <tr>
+            <th></th>
+            <th>8</th>
+            <th>5</th>
+            <th>2</th>
+          </tr>
+          <tr>
+            <th>-</th>
+            <th>5</th>
+            <th>4</th>
+            <th>5</th>
+          </tr>
+
+          <tr>
+            <td style="color:white">this is empty</td>
+            <td><input type="number" id="input10"></td>
+            <td><input type="number" id="input11"></td>
+            <td><input type="number" id="input12"></td>
+          </tr>
+          
+        </table>
+
+
+        <button id="subbtn" class="btn btn-success" onclick="checkAnswer3()">Submit Answer</button>
+
+        <p id="compliment3" class="comm"></p>
+      </div>
+
+      <div class="col-lg-3 col-md-3 col-sm-3">
+        <h3>Q4. Solve</h3>
+        <table>
+          
+          <tr>
+            <td></td>
+            <td><input type="number"></td>
+            <td><input type="number"></td>
+            <td><input type="number"></td>
+          </tr>
+          <tr>
+            <th></th>
+            <th>6</th>
+            <th>3</th>
+            <th>4</th>
+          </tr>
+          <tr>
+            <th>-</th>
+            <th>2</th>
+            <th>4</th>
+            <th>6</th>
+          </tr>
+
+          <tr>
+            <td style="color:white">this is empty</td>
+            <td><input type="number" id="input14"></td>
+            <td><input type="number" id="input15"></td>
+            <td><input type="number" id="input16"></td>
+          </tr>
+          
+        </table>
+
+
+        <button id="subbtn" class="btn btn-success" onclick="checkAnswer4()">Submit Answer</button>
+
+        <p id="compliment4" class="comm"></p>
+      </div>
+      <br>
+      <br>
+    </div>
+
+    <br>
+    <hr>
+
+    <div class="col-lg-4 col-md-4 col-sm-4">
+      <h3>Q5. Arrange in column and find the difference of 347 and 195</h3>
+      <table>
+        
+        <tr>
+          <td></td>
+          <td><input type="number"></td>
+          <td><input type="number"></td>
+          <td><input type="number"></td>
+        </tr>
+        <tr>
+          <th style="color:white">.</th>
+          <th><input type="number"></th>
+          <th><input type="number"></th>
+          <th><input type="number"></th>
+        </tr>
+        <tr>
+          <th>-</th>
+          <th><input type="number"></th>
+          <th><input type="number"></th>
+          <th><input type="number"></th>
+        </tr>
+
+        <tr>
+          <td style="color:white">this is empty</td>
+          <td><input type="number" id="input18"></td>
+          <td><input type="number" id="input19"></td>
+          <td><input type="number" id="input20"></td>
+        </tr>
+        
+      </table>
+
+
+      <button id="subbtn" class="btn btn-success" onclick="checkAnswer5()">Submit Answer</button>
+
+      <p id="compliment5" class="comm"></p>
+    </div>
+
+    <div class="col-lg-4 col-md-4 col-sm-4">
+      <h3>Q6. Arrange in column and find the difference of 5643 and 7124</h3>
+      <table>
+        
+        <tr>
+          <td><input type="number" style="border:1px dotted white"></td>
+          <td><input type="number"></td>
+          <td><input type="number"></td>
+          <td><input type="number"></td>
+          <td><input type="number"></td>
+        </tr>
+        <tr>
+          <th style="color:white">.</th>
+          <th><input type="number"></th>
+          <th><input type="number"></th>
+          <th><input type="number"></th>
+          <th><input type="number"></th>
+        </tr>
+        <tr>
+          <th>-</th>
+          <th><input type="number"></th>
+          <th><input type="number"></th>
+          <th><input type="number"></th>
+          <th><input type="number"></th>
+        </tr>
+
+        <tr>
+          <td><input type="number" style="border:1px dotted white"></td>
+          <td><input type="number" id="input22"></td>
+          <td><input type="number" id="input23"></td>
+          <td><input type="number" id="input24"></td>
+          <td><input type="number" id="input21"></td>
+        </tr>
+        
+      </table>
+
+
+      <button id="subbtn" class="btn btn-success" onclick="checkAnswer6()">Submit Answer</button>
+
+      <p id="compliment6" class="comm"></p>
+    </div>
+
+    <div class="col-lg-4 col-md-4 col-sm-4">
+      <h3>Q7. Simplify 9854 - 2678 </h3>
+      <br>
+      <table>
+        
+        <tr>
+          <td></td>
+          <td><input type="number"></td>
+          <td><input type="number"></td>
+          <td><input type="number"></td>
+          <td><input type="number"></td>
+        </tr>
+        <tr>
+          <th style="color:white">this</th>
+          <th><input type="number"></th>
+          <th><input type="number"></th>
+          <th><input type="number"></th>
+          <th><input type="number"></th>
+        </tr>
+        <tr>
+          <th>-</th>
+          <th><input type="number"></th>
+          <th><input type="number"></th>
+          <th><input type="number"></th>
+          <th><input type="number"></th>
+        </tr>
+
+        <tr>
+          <td><p type="number" style="color:white"></p></td>
+          <td><input type="number" id="input25"></td>
+          <td><input type="number" id="input26"></td>
+          <td><input type="number" id="input27"></td>
+          <td><input type="number" id="input28"></td>
+        </tr>
+        
+      </table>
+
+
+      <button id="subbtn" class="btn btn-success" onclick="checkAnswer7()">Submit Answer</button>
+
+      <p id="compliment7" class="comm"></p>
+    <br>
+    <br>
+  </div>
+
+</div>
+</center>
+<p style="color:white">This is test</p>
+<br><p style="color:white">This is test</p>
+   <footer style="background-color:antiquewhite; font-size:20px;">Copyright: Way to Succeed Classes <img src="Logo.png" width="70"></footer>
+  
+   <script>
+   
+
+      function checkAnswer1(){
+        //a= document.getElementById("input1").value;
+        b= document.getElementById("input2").value;
+        c= document.getElementById("input3").value;
+        d= document.getElementById("input4").value;
+          if(b=="2"){
+            if(c=="1"){
+              if(d=="2"){
+                document.getElementById("compliment1").innerHTML= "Well Done &#128512"
+                document.getElementById("points").play();
+              }
+              else{
+                document.getElementById("compliment1").innerHTML= "Think Again &#128533"
+                document.getElementById("fail").play();
+              }
+            }
+            else{
+              document.getElementById("compliment1").innerHTML= "Think Again &#128533"
+              document.getElementById("fail").play();
+            }
+          }
+          else{
+            document.getElementById("compliment1").innerHTML= "Think Again &#128533"
+            document.getElementById("fail").play();
+          }
+    }
+
+    function checkAnswer2(){
+    // e= document.getElementById("input5").value;
+     f= document.getElementById("input6").value;
+     g= document.getElementById("input7").value;
+     h= document.getElementById("input8").value;
+      //if(e=="5"){
+        if(f=="3"){
+          if(g=="6"){
+            if(h=="5"){
+              document.getElementById("compliment2").innerHTML= "Well Done &#128512"
+              document.getElementById("points").play();
+            }
+            else{
+              document.getElementById("compliment2").innerHTML= "Think Again &#128533"
+              document.getElementById("fail").play();
+            }
+          }
+          else{
+            document.getElementById("compliment2").innerHTML= "Think Again &#128533"
+            document.getElementById("fail").play();
+          }
+        }
+        else{
+          document.getElementById("compliment2").innerHTML= "Think Again &#128533"
+          document.getElementById("fail").play();
+        }
+     // }
+    //else{
+      //document.getElementById("compliment2").innerHTML= "Think Again &#128533"
+      //document.getElementById("fail").play();
+    //}
+  }
+
+  function checkAnswer3(){
+    // e= document.getElementById("input9").value;
+     f= document.getElementById("input10").value;
+     g= document.getElementById("input11").value;
+     h= document.getElementById("input12").value;
+      //if(e=="5"){
+        if(f=="3"){
+          if(g=="0"){
+            if(h=="7"){
+              document.getElementById("compliment3").innerHTML= "Well Done &#128512"
+              document.getElementById("points").play();
+            }
+            else{
+              document.getElementById("compliment3").innerHTML= "Think Again &#128533"
+              document.getElementById("fail").play();
+            }
+          }
+          else{
+            document.getElementById("compliment3").innerHTML= "Think Again &#128533"
+            document.getElementById("fail").play();
+          }
+        }
+        else{
+          document.getElementById("compliment3").innerHTML= "Think Again &#128533"
+          document.getElementById("fail").play();
+        }
+     // }
+    //else{
+      //document.getElementById("compliment3").innerHTML= "Think Again &#128533"
+      //document.getElementById("fail").play();
+    //}
+  }   
+
+  function checkAnswer4(){
+    // e= document.getElementById("input13").value;
+     f= document.getElementById("input14").value;
+     g= document.getElementById("input15").value;
+     h= document.getElementById("input16").value;
+      //if(e=="5"){
+        if(f=="3"){
+          if(g=="8"){
+            if(h=="8"){
+              document.getElementById("compliment4").innerHTML= "Well Done &#128512"
+              document.getElementById("points").play();
+            }
+            else{
+              document.getElementById("compliment4").innerHTML= "Think Again &#128533"
+              document.getElementById("fail").play();
+            }
+          }
+          else{
+            document.getElementById("compliment4").innerHTML= "Think Again &#128533"
+            document.getElementById("fail").play();
+          }
+        }
+        else{
+          document.getElementById("compliment4").innerHTML= "Think Again &#128533"
+          document.getElementById("fail").play();
+        }
+     // }
+    //else{
+      //document.getElementById("compliment4").innerHTML= "Think Again &#128533"
+      //document.getElementById("fail").play();
+    //}
+  }   
+
+  function checkAnswer5(){
+    // e= document.getElementById("input17").value;
+     f= document.getElementById("input18").value;
+     g= document.getElementById("input19").value;
+     h= document.getElementById("input20").value;
+      //if(e=="5"){
+        if(f=="1"){
+          if(g=="5"){
+            if(h=="2"){
+              document.getElementById("compliment5").innerHTML= "Well Done &#128512"
+              document.getElementById("points").play();
+            }
+            else{
+              document.getElementById("compliment5").innerHTML= "Think Again &#128533"
+              document.getElementById("fail").play();
+            }
+          }
+          else{
+            document.getElementById("compliment5").innerHTML= "Think Again &#128533"
+            document.getElementById("fail").play();
+          }
+        }
+        else{
+          document.getElementById("compliment5").innerHTML= "Think Again &#128533"
+          document.getElementById("fail").play();
+        }
+     // }
+    //else{
+      //document.getElementById("compliment5").innerHTML= "Think Again &#128533"
+      //document.getElementById("fail").play();
+    //}
+  }   
+
+  function checkAnswer6(){
+     e= document.getElementById("input21").value;
+     f= document.getElementById("input22").value;
+     g= document.getElementById("input23").value;
+     h= document.getElementById("input24").value;
+      if(e=="1"){
+        if(f=="4"){
+          if(g=="8"){
+            if(h=="1"){
+              document.getElementById("compliment6").innerHTML= "Well Done &#128512"
+              document.getElementById("points").play();
+            }
+            else{
+              document.getElementById("compliment6").innerHTML= "Think Again &#128533"
+              document.getElementById("fail").play();
+            }
+          }
+          else{
+            document.getElementById("compliment6").innerHTML= "Think Again &#128533"
+            document.getElementById("fail").play();
+          }
+        }
+        else{
+          document.getElementById("compliment6").innerHTML= "Think Again &#128533"
+          document.getElementById("fail").play();
+        }
+      }
+      else{
+        document.getElementById("compliment6").innerHTML= "Think Again &#128533"
+        document.getElementById("fail").play();
+      }
+  }   
+
+  function checkAnswer7(){
+    e= document.getElementById("input25").value;
+    f= document.getElementById("input26").value;
+    g= document.getElementById("input27").value;
+    h= document.getElementById("input28").value;
+     if(e=="7"){
+       if(f=="1"){
+         if(g=="7"){
+           if(h=="6"){
+             document.getElementById("compliment7").innerHTML= "Well Done &#128512"
+             document.getElementById("points").play();
+           }
+           else{
+             document.getElementById("compliment7").innerHTML= "Think Again &#128533"
+             document.getElementById("fail").play();
+           }
+         }
+         else{
+           document.getElementById("compliment7").innerHTML= "Think Again &#128533"
+           document.getElementById("fail").play();
+         }
+       }
+       else{
+         document.getElementById("compliment7").innerHTML= "Think Again &#128533"
+         document.getElementById("fail").play();
+       }
+     }
+     else{
+       document.getElementById("compliment7").innerHTML= "Think Again &#128533"
+       document.getElementById("fail").play();
+     }
+ }   
+</script>
+</body>
+
+</html>
